@@ -39,7 +39,6 @@ static string get_address_part(string ip,int octet) {
         } else if (octet == 3) {
             if (count2 == octet && ip[i] != '.') addressPart += ip[i];
             if (ip[i] == '.' && count < 3) count2++;
-            if (count2 > octet) return addressPart;
         }
     }
     return addressPart;
