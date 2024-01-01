@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 static bool check_address_part(string addressPart) {
@@ -17,6 +17,7 @@ static bool check_address_part(string addressPart) {
         number = (100 * (addressPart[0] - '0')) + (10 * (addressPart[1] - '0')) + (addressPart[2] - '0');
     }
     if (number > 255) return false;
+    return true;
 }
 
 static string get_address_part(string ip,int octet) {
